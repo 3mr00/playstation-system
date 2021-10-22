@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cafe System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Styles.css" />
+  </head>
+  <body>
+    <svg style="    margin:0% 5%; position: fixed; width:100% ; height:100% ; " viewBox="0 0 600 300">
+      <!-- Symbol-->
+      <symbol id="s-text">
+        <text text-anchor="middle" x="50%" y="50%" dy=".35em">
+          PlayStation 
+        </text>
+      </symbol>
+      <!-- Duplicate symbols-->
+      <use class="text" xlink:href="#s-text"></use>
+      <use class="text" xlink:href="#s-text"></use>
+      <use class="text" xlink:href="#s-text"></use>
+      <use class="text" xlink:href="#s-text"></use>
+      <use class="text" xlink:href="#s-text"></use>
+    </svg>
+
+    <nav>
+      <a id="firsttlink" href="#sectionOne"><img src="images/playstation.png" class="navicon" alt="playstation"/></a>
+      <a id="sectlink"   href="#sectiontwo"><img src="images/coffee-cup.png" class="navicon" alt="coffee-cup"/></a>
+      <a id="thirdtlink" href="#sectionthird"><img src="images/document.png" class="navicon" alt="document"/></a>
+      <a id="fourtlink"  href="#sectionfour"><img src="images/man.png" class="navicon" alt="document"/></a>
+    </nav>
+    <div class="container">
+      <section class="hide" id="sectionOne">
+
+        <img  id="mySizeChart" src="images/money.png"  alt="playstation"/>
+
+        <div id="mySizeChartModal" class="ebcf_modal">
+        
+          <div class="ebcf_modal-content">
+            <span class="ebcf_close">&times;</span>
+            <h6 class="h6pricePS">Enter price one hour :</h6>
+            <div  id="myDIV" class="search-wrapper cf">
+
+                    <input 
+                        type="text"
+                        id="PricePs" 
+                        placeholder="Enter price hour..." 
+                        title="number only!"
+                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" 
+                        style="box-shadow: none"
+                     /> 
+                <button id ="addPricePS" type="submit">Add</button>
+                <div id="mypricePS"></div>
+
+            </div>
+          </div>
+        
+        </div>
+
+        
+
+        <div class="area">
+          <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <img
+        src="images/gummy-sega-mega-drive.png"
+        class="PSlogo"
+        alt="vector book"
+      />
+
+      <div class="cards">
+
+        <div class="wrapper">
+          <h1 class="h1-counter">Device Num 1</h1>
+          <div id="stopwatch">
+            <div class="timerInfo">
+              <span id="hours">00</span>
+              <span id="minutes">00</span>
+              <span id="seconds">00</span>
+              <span id="secTenth">00</span>
+          </div>
+          </div>
+          <ul id="buttons">
+            <li><button id="startBtn">Start</button></li>
+            <li><button id="stopBtn">Stop</button></li>
+          </ul>
+        </div>
+
+        <div class="wrapper">
+          <h1 class="h1-counter">Device Num 2</h1>
+          <div id="stopwatchsec">
+            <div class="timerInfo">
+              <span id="hourssec">00</span>
+              <span id="minutessec">00</span>
+              <span id="secondssec">00</span>
+              <span id="secTenthsec">00</span>
+          </div>
+          </div>
+
+          <ul id="buttons">
+            <li><button id="startBtnsec">Start</button></li>
+            <li><button id="stopBtnsec">Stop</button></li>
+          </ul>
+        </div>
+
+        <div class="wrapper">
+          <h1 class="h1-counter">Device Num 3</h1>
+          <div id="stopwatchthird">
+            <div class="timerInfo">
+              <span id="hoursthird">00</span>
+              <span id="minutesthird">00</span>
+              <span id="secondsthird">00</span>
+              <span id="secTenththird">00</span>
+          </div>
+          </div>
+          <ul id="buttons">
+            <li><button id="startBtnthird">Start</button></li>
+            <li><button id="stopBtnthird">Stop</button></li>
+          </ul>
+        </div>
+
+        <div class="wrapper">
+          <h1 class="h1-counter">Device Num 4</h1>
+          <div id="stopwatchfourth">
+            <div class="timerInfo">
+              <span id="hoursfourth">00</span>
+              <span id="minutesfourth">00</span>
+              <span id="secondsfourth">00</span>
+              <span id="secTenthfourth">00</span>
+          </div>
+          </div>
+          <ul id="buttons">
+            <li><button id="startBtnfourth">Start</button></li>
+            <li><button id="stopBtnfourth">Stop</button></li>
+          </ul>
+        </div>
+
+        <div class="wrapper">
+          <h1 class="h1-counter">Device Num 5</h1>
+          <div id="stopwatchfifth">
+            <div class="timerInfo">
+              <span id="hoursfifth">00</span>
+              <span id="minutesfifth">00</span>
+              <span id="secondsfifth">00</span>
+              <span id="secTenthfifth">00</span>
+          </div>
+          </div>
+          <ul id="buttons">
+            <li><button id="startBtnfifth">Start</button></li>
+            <li><button id="stopBtnfifth">Stop</button></li>
+          </ul>
+        </div>
+
+        <div class="wrapper">
+          <h1 class="h1-counter">Device Num 6</h1>
+          <div id="stopwatchsix">
+            <div class="timerInfo">
+              <span id="hourssix">00</span>
+              <span id="minutessix">00</span>
+              <span id="secondssix">00</span>
+              <span id="secTenthsix">00</span>
+          </div>
+          </div>
+          <ul id="buttons">
+            <li><button id="startBtnsix">Start</button></li>
+            <li><button id="stopBtnsix">Stop</button></li>
+          </ul>
+        </div>
+
+        <div class="wrapper">
+          <h1 class="h1-counter">Device Num 7</h1>
+          <div id="stopwatchseven">
+            <div class="timerInfo">
+              <span id="hoursseven">00</span>
+              <span id="minutesseven">00</span>
+              <span id="secondsseven">00</span>
+              <span id="secTenthseven">00</span>
+          </div>
+          </div>
+          <ul id="buttons">
+            <li><button id="startBtnseven">Start</button></li>
+            <li><button id="stopBtnseven">Stop</button></li>
+          </ul>
+        </div>
+
+        <div class="wrapper">
+          <h1 class="h1-counter">Device Num 8</h1>
+          <div id="stopwatcheight">
+            <div class="timerInfo">
+              <span id="hourseight">00</span>
+              <span id="minuteseight">00</span>
+              <span id="secondseight">00</span>
+              <span id="secTentheight">00</span>
+          </div>
+          </div>
+          <ul id="buttons">
+            <li><button id="startBtneight">Start</button></li>
+            <li><button id="stopBtneight">Stop</button></li>
+          </ul>
+        </div>
+      </div>
+
+          <!-- playstation text-->
+
+          <svg viewBox="0 0 600 300">
+            <!-- Symbol-->
+            <symbol id="s-text">
+              <text text-anchor="middle" x="50%" y="50%" dy=".35em">
+                PlayStation 
+              </text>
+            </symbol>
+            <!-- Duplicate symbols-->
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+          </svg>
+  
+
+        <table class="table">
+          <thead>
+            <th>Device Num</th>
+            <th>Time</th>
+            <th>Date</th>
+            <th>Price</th>
+
+          </thead>
+          <tbody id="tableBody">
+
+          </tbody>
+        </table>
+
+    </div>
+
+    <div>
+
+
+      </section>
+
+
+
+
+
+      <section class="hide" id="sectiontwo">
+        <div class="section">
+              <div class="scrolltable">  
+                  <table class="tableCAFE">
+                    <thead>
+                      <th>item</th>
+                      <th>Quantity</th>
+                      <th>Date</th>
+                      <th>Total</th>
+                      <th>Del</th>
+
+                    </thead>
+                    <tbody id="myTable">
+
+                    </tbody>
+
+
+                  </table>
+                </div>
+
+                <div class="scrolltable  tabletotal">  
+                  <table class="tableCAFE">
+                    <thead>
+                      <th>Total</th>
+
+                    </thead>
+                    <tbody >
+                      <tr>
+                        <td id="val"></td>
+                      </tr>
+                    </tbody>
+
+                  </table>
+                </div>
+
+
+
+          <h1 class="textCAFE">
+            <div class="letter letter-1">C</div>
+            <div class="letter letter-2">A</div>
+            <div class="letter letter-3">F</div>
+            <div class="letter letter-4">E</div>
+         </h1>
+
+       <div>
+           <span id="btn-modal"></span>
+
+          <div class="overlay" id="overlay"></div>
+          <div class="modal" id="modal">
+            <button class="modal-close-btn" id="close-btn"><img src="images/close.png" class="modalicon" alt="playstation"/></button>
+
+               <h6>Enter name item :</h6>
+                  <form  id="myDIV" class="search-wrapper cf">
+                    <input
+                      type="text" 
+                      id="myInput"
+                      placeholder="Enter name item..."
+                      required
+                      style="box-shadow: none"
+                      title="Letters only!"
+                      onkeypress="if(['Space'].includes(arguments[0].code)){return true;}return /\p{L}/u.test(event.key)" 
+                      >
+                </form>
+
+          <h6 class="h6-price">Enter price item :</h6>
+                <div  id="myDIV" class="search-wrapper cf">
+
+                      <input 
+                          type="text"
+                          id="myInputPrice" 
+                          placeholder="Enter price item..." 
+                          required
+                          title="number only!"
+                          oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                          required style="box-shadow: none"
+                          />
+                      <button id ="addsubmit" type="submit">Add</button>
+
+                </div>
+
+        </div>
+
+
+
+
+
+        <span id="editorBtn"><img src="images/edit.png" class="editicon" alt="playstation"/></span>
+
+          <div class="Menu">
+
+            <a id="Menuone" >
+              <div class="rightbtn-secsec color-select1">
+                <div id="editor" class="divmenu">Drinks Cold</div>
+              </div>
+            </a>
+            <a id="Menutwo">    
+             <div class="rightbtn-secsec color-select1">
+                <div id="editor" class="divmenu">Drinks Hot </div>
+              </div>
+            </a>
+            <a  id="Menuthird">
+              <div class="rightbtn-secsec color-select1">
+                <div id="editor" class="divmenu">Sweets </div>
+                </div>
+            </a>
+            <a  id="Menufour">
+              <div class="rightbtn-secsec color-select1">
+                <div id="editor" class="divmenu">Foods </div>
+                </div>
+            </a>
+          </div>
+           
+
+          <div id="Menu1" >
+
+            <div id="addDiv" class="grid2x2">
+            </div>      
+
+          </div>
+
+
+          <div id="Menu2" style="display: none;">
+
+            
+            <div id="addDiv2" class="grid2x2">
+            </div>  
+          </div>
+
+
+
+          <div id="Menu3" style="display: none;">
+            <div id="addDiv3" class="grid2x2">
+
+            </div>  
+          </div>
+
+
+
+          <div id="Menu4" style="display: none;">
+            <div id="addDiv4" class="grid2x2">
+
+            </div>  
+          </div>
+
+     </section>
+
+      <section class="hide" id="sectionthird">
+        <h1>Third</h1>
+      </section>
+
+      <section class="hide" id="sectionfour">
+        <h1>Fourth</h1>
+      </section>
+    </div>
+    <div>
+   
+
+      <script src="easyTimer.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
